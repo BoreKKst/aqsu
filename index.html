@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071521">
+  <meta name="description" content="AqSu — су деңгейін автоматты басқару туралы ғылыми жоба.">
+  <title>AqSu — Бір тамшы. Үлкен өзгеріс.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home">Aq<span>Su</span><small> / SMART WATER</small></a>
+    <nav class="desktop-nav" aria-label="Негізгі мәзір">
+      <a href="#about">Жоба</a><a href="#principle">Жұмыс қағидасы</a><a href="#model">Симулятор</a><a href="#results">Нәтиже</a><a href="#author">Автор</a>
+    </nav>
+    <a class="nav-cta" href="#model">Сынап көру <span>↗</span></a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero container">
+    <div class="hero-copy">
+      <div class="eyebrow"><i></i> ЖАС ЗЕРТТЕУШІНІҢ ЖОБАСЫ · 2026–2027</div>
+      <p class="overline">АҚТАУДАН БАСТАЛҒАН ИДЕЯ</p>
+      <h1>Бір тамшы.<br>Үлкен <span>өзгеріс.</span></h1>
+      <p class="lead">Су толғанда өзі тоқтайтын жүйе. Сенсор су деңгейін бақылайды, ал сорғы қажет кезде ғана жұмыс істейді.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#model">Жүйені сынау <b>↗</b></a>
+        <a class="button button-ghost" href="#principle">Қалай жұмыс істейді?</a>
+      </div>
+      <div class="author-line"><strong>Досқали Ақжүрек Мерейұлы</strong><span>8 «Г» сынып · №20 Мұхтар Әуезов атындағы мектеп</span></div>
+    </div>
+
+    <div class="monitor">
+      <div class="monitor-top"><span>ЖҮЙЕНІҢ КҮЙІ</span><span class="live"><i></i> LIVE DEMO</span></div>
+      <div class="tank-stage">
+        <div class="sensor-label">IR СЕНСОР <span>●</span><div class="sensor-line"></div></div>
+        <div class="tank">
+          <div class="water" id="water"></div>
+          <div class="water-value"><strong id="level">42%</strong><small>СУ ДЕҢГЕЙІ</small></div>
+          <div class="tank-mark mark-1"></div><div class="tank-mark mark-2"></div><div class="tank-mark mark-3"></div>
+        </div>
+        <div class="pipe"><span class="pump-icon" id="pumpIcon">✣</span></div>
+      </div>
+      <div class="monitor-data">
+        <div><small>СОРҒЫ</small><strong id="pumpState" class="state-on">Қосулы</strong></div>
+        <div><small>БАСҚАРУ РЕЖИМІ</small><strong id="modeState">Автоматты</strong></div>
+      </div>
+      <p class="demo-caption">Көрсеткіштер — интерактивті демонстрация. Нақты құрылғыға қосылмаған.</p>
+    </div>
+  </section>
+
+  <section class="metrics container">
+    <div class="metric"><strong>1–2 <small>сек</small></strong><span>Құжаттағы реакция уақыты</span></div>
+    <div class="metric"><strong>5 <small>рет</small></strong><span>Құжатта көрсетілген қайталау</span></div>
+    <div class="metric"><strong>11 000 <small>₸</small></strong><span>Жобаның есептік шығыны</span></div>
+  </section>
+
+  <section class="section container" id="about">
+    <div class="section-heading">
+      <div><p class="section-kicker">01 / ЖОБА ТУРАЛЫ</p><h2>Суды үнемдеу —<br><span>қарапайым шешімнен</span> басталады.</h2></div>
+      <p>Мақсат — тұрмыста, мектепте және шағын шаруашылықта су деңгейін автоматты бақылауға арналған қолжетімді жүйе ұсыну.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card"><span class="card-number">01</span><div class="feature-icon">⌁</div><h3>Сенсор бақылайды</h3><p>Су деңгейін анықтайтын сенсор басқару блогына сигнал береді. Жобаның тақырыбы инфрақызыл сәулеге негізделген.</p></article>
+      <article class="feature-card"><span class="card-number">02</span><div class="feature-icon">⌘</div><h3>Блок шешім қабылдайды</h3><p>Сенсор сигналы бойынша басқару бөлігі сорғының қосылуы мен тоқтауын реттейді.</p></article>
+      <article class="feature-card"><span class="card-number">03</span><div class="feature-icon">↗</div><h3>Сорғы әрекет етеді</h3><p>Деңгей төмендегенде су айдалады. Белгіленген шекке жеткенде сорғы тоқтайды.</p></article>
+    </div>
+    <div class="notice"><span>✦</span><p><strong>Жобаның негізгі идеясы</strong> — су деңгейін бақылауды қолжетімді компоненттер арқылы автоматтандыру.</p></div>
+  </section>
+
+  <section class="section section-dark" id="principle">
+    <div class="container">
+      <p class="section-kicker">ИНЖЕНЕРЛІК ЛОГИКА</p>
+      <div class="section-heading"><h2>Бақылайды. Басқарады.<br><span>Үнемдейді.</span></h2><p>Жүйе үш негізгі кезең арқылы жұмыс істейді: өлшеу, шешім қабылдау және әрекет ету.</p></div>
+      <div class="principle-layout">
+        <div class="flow-card">
+          <div class="flow-node"><span>01</span><b>IR сенсор</b><small>Су деңгейін анықтайды</small></div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node"><span>02</span><b>Басқару блогы</b><small>Сигналды өңдейді</small></div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-node-accent"><span>03</span><b>Реле + сорғы</b><small>Суды толтыруды басқарады</small></div>
+        </div>
+        <div class="principle-list">
+          <article><b>01</b><div><h3>Су азайса — толтыру басталады</h3><p>Төменгі деңгей анықталғанда басқару блогы сорғыны іске қосады.</p></div></article>
+          <article><b>02</b><div><h3>Су жеткілікті болса — сорғы тоқтайды</h3><p>Жоғарғы межеге жеткенде реле сорғыны ажыратады.</p></div></article>
+          <article><b>03</b><div><h3>Қажет кезде ғана жұмыс істейді</h3><p>Үздіксіз бақылау қажеттілігін азайту және артық төгілудің алдын алу көзделеді.</p></div></article>
+        </div>
+      </div>
+      <p class="fine-print">Сұлба — жұмыс қағидасының түсіндірмесі. Нақты электр монтажының схемасы емес.</p>
+    </div>
+  </section>
+
+  <section class="section container" id="model">
+    <p class="section-kicker">02 / ИНТЕРАКТИВТІ МОДЕЛЬ</p>
+    <div class="section-heading"><h2>Су деңгейін <span>басқарып көріңіз.</span></h2><p>Сырғытпаны жылжытыңыз немесе толтыруды іске қосыңыз. Автоматты режимдегі төменгі шек — 15%, жоғарғы шек — 95%.</p></div>
+    <div class="simulator">
+      <div class="sim-controls">
+        <div class="mode-switch"><button id="autoBtn" class="selected">Автоматты</button><button id="manualBtn">Қолмен</button></div>
+        <div class="range-head"><label for="levelSlider">Су деңгейі</label><strong id="rangeValue">42%</strong></div>
+        <input id="levelSlider" type="range" min="0" max="100" value="42">
+        <div class="sim-actions"><button id="fillBtn" class="button button-primary">▶ Толтыруды бастау</button><button id="drainBtn" class="button button-ghost">− 20% су жұмсау</button><button id="pumpBtn" class="button button-ghost" hidden>Сорғыны ауыстыру</button><button id="resetBtn" class="text-button">Қалпына келтіру ↺</button></div>
+        <p id="simMessage" class="sim-message" aria-live="polite">Сорғы жұмыс істеп тұр. Жоғарғы шекке жеткенде автоматты тоқтайды.</p>
+      </div>
+      <div class="event-panel"><div class="event-heading"><span>ОҚИҒАЛАР ЖУРНАЛЫ</span><span>DEMO</span></div><div id="eventLog" class="event-log" role="log" aria-live="polite"><p>Жүйе дайын. Бастапқы су деңгейі: 42%.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="results">
+    <div class="container">
+      <p class="section-kicker">03 / ТӘЖІРИБЕЛІК БӨЛІМ</p>
+      <div class="section-heading"><h2>Құжаттағы сынақ <span>нәтижелері.</span></h2><p>Төмендегі деректер ғылыми жобада берілген нәтижелер ретінде көрсетілген. Симулятор бұл өлшемдерді қайта жүргізбейді.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Сынақ</th><th>Жағдай</th><th>Құрылғы әрекеті</th><th>Реакция</th></tr></thead><tbody>
+        <tr><td>01</td><td>Төмен деңгей · 10–15%</td><td class="positive">Сорғы қосылды</td><td>2 сек</td></tr>
+        <tr><td>02</td><td>Орташа деңгей · 50%</td><td>Жұмысын жалғастырды</td><td>—</td></tr>
+        <tr><td>03</td><td>Жоғары деңгей · 90–100%</td><td class="positive">Сорғы тоқтады</td><td>1 сек</td></tr>
+        <tr><td>04</td><td>5 рет қайталау</td><td>Тұрақты жұмыс</td><td>1–2 сек</td></tr>
+        <tr><td>05</td><td>30 минуттық сынақ</td><td>Артық қызусыз жұмыс</td><td>—</td></tr>
+      </tbody></table></div>
+      <p class="fine-print">Нәтижелер автор ұсынған жоба деректері; тәуелсіз зертханалық растау ретінде қарастырылмайды.</p>
+    </div>
+  </section>
+
+  <section class="section container split-section">
+    <div><p class="section-kicker">04 / ҚҰРАСТЫРУ</p><h2>Жобаның есептік <span>құны.</span></h2><p class="section-desc">Бағалар ғылыми жобада берілген. Қазіргі дүкен бағасы ретінде ұсынылмайды.</p><div id="costList" class="cost-list"></div><div class="cost-total"><span>Барлығы</span><strong>11 000 ₸</strong></div></div>
+    <div class="next-steps"><p class="section-kicker">КЕЛЕСІ ҚАДАМ</p><h2>Жетілдіру <span>мүмкіндіктері.</span></h2><article class="mini-card"><span>↗</span><div><h3>Үлкен резервуарларға бейімдеу</h3><p>Сорғы қуатын арттыру және жүйені үлкен көлемді ыдыстарға бейімдеу.</p></div></article><article class="mini-card"><span>⌑</span><div><h3>Қауіпсіз құрастыру</h3><p>Су мен электр қосылыстарын бөлек ұстап, оқшаулауды тексеру қажет. Құрастыру ересек адамның бақылауымен орындалады.</p></div></article></div>
+  </section>
+
+  <section class="section container" id="author">
+    <div class="author-card"><div class="author-mark">АҚ</div><div class="author-main"><p class="section-kicker">ЖОБА АВТОРЫ</p><h2>Досқали Ақжүрек<br><span>Мерейұлы</span></h2><p>8 «Г» сынып · 2026–2027 оқу жылы</p></div><div class="author-details"><h3>«Инфрақызыл сәуле арқылы жұмыс істейтін автоматтандырылған су жинау жүйесін жасау»</h3><p>«№20 Мұхтар Әуезов атындағы жалпы білім беретін мектеп» КММ<br>Маңғыстау облысы, Ақтау қаласы</p><p><strong>Ғылыми жетекшісі</strong><br>Абилдикова Турсынгул Каршыгаевна</p><small>Бағыты: технология, өнер, дизайн және креативті индустриялар.</small></div></div>
+  </section>
+</main>
+<footer><div class="container footer-inner"><a class="brand" href="#home">Aq<span>Su</span></a><span>Ақжүректің ғылыми жобасы · Ақтау, 2026</span><button id="printBtn">Басып шығару / PDF ↗</button></div></footer>
+<nav class="mobile-nav"><a href="#about">Жоба</a><a href="#model">Сынау</a><a href="#results">Нәтиже</a><a href="#author">Автор</a></nav>
+<script src="js/app.js"></script>
+</body>
+</html>
